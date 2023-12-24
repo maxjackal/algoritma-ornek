@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //klavyeden girilecek x değerinden n değerine kadar tüm sayıları listele
+        var x = + prompt("ilk sayıyı giriniz:")
+        var n = + prompt("son sayıyı giriniz:")
+        while (x > n) {
+            console.log(x);
+            x++;
+        }
+        console.log("son")
+
+        //klavyeden girilecek bir n değerine kadar fibonecci dizisini bul
+        var n = + prompt("kaçıncı terimine kadar hesaplanacak:")
+        var a = 0;
+        var b = 1;
+
+        for (var i = 0; i < n; i++) {
+            console.log(a);
+            var eski_a = a;
+            var a = b;
+            var b = eski_a + a;
+        }
+        console.log(b);
+
+        //klavyeden girilen sayının tam bölenlerini bulma
+        var i = 1;
+        var n = +prompt("tam bölenlerini bulmak istediğiniz sayıyı giriniz:")
+        while (i <= n) {
+
+            var tamBolen = n % i;
+
+            if (tamBolen == 0) {
+                console.log(i);
+            }
+            i++;
+        }
+
+        //klavyeden girilen 3 sayıdan büyüklük sıralamasına göre ortanca bul
+        var sayi1 = +prompt("1. sayıyı giriniz:")
+        var sayi2 = +prompt("2. sayıyı giriniz:")
+        var sayi3 = +prompt("3. sayıyı giriniz:")
+        if (sayi1 > sayi2 && sayi2 < sayi3) {
+            console.log(sayi1)
+        }
+        if (sayi1 > sayi3 && sayi1 < sayi2) {
+            console.log("ortanca sayı= ", sayi1)
+        }
+        if (sayi2 > sayi3 && sayi2 < sayi1) {
+            console.log("ortanca sayı= ", sayi2)
+        }
+        if (sayi2 > sayi1 && sayi2 < sayi3) {
+            console.log("ortanca sayı= ", sayi1)
+        }
+        else {
+            console.log(sayi3)
+        }
+
+        //Klavyeden girilen A ve B gibi iki sayının bölme işlemi kullanmadan sadece toplama ve çıkarma kullanarak kalanlı bölme yap
+
+
+        //Klavyeden girilen A ve B gibi iki sayıyı, çarpma işlemi kullanmadan sadece toplama ve çıkarma kullanarak çarpıp sonucu ekrana yaz
+        var sayac = 0;
+        var sayi1 = +prompt("1. sayıyı giriniz:")
+        var sayi2 = +prompt("2. sayıyı giriniz:")
+        if (sayi2 > 0) {
+            sayac++;
+            sayi2--;
+
+        }
+        else {
+            console.log(sayac)
+        }
+        //Sıfır –0 girilinceye kadar klavyeden okutulan değerlerin ortalamasını hesapla
+        var toplam = 0;
+        var adet = 0;
+        while (true) {
+            var sayi = +prompt(" sayıyı giriniz:")
+            if (sayi == 0) {
+                break;
+            }
+            toplam += sayi;
+            adet++;
+
+        }
+        var ortalama = toplam / adet;
+        console.log(ortalama)
+
+        //Klavyeden girilecek 20 sayının tek olanlarını ayrı çift olanlarını ayrı toplayıp sonuçları ekrana yaz
+        var sayac = 0;
+        var tekToplam = 0;
+        var ciftToplam = 0;
+        while (true) {
+            var sayi = +prompt(" sayıyı giriniz:")
+            if (sayi % 2 == 0) {
+                ciftToplam = ciftToplam + sayi
+            }
+            else {
+                tekToplam = tekToplam + sayi;
+            }
+            sayac++;
+            if (sayac == 20) {
+                break;
+            }
+        }
+        console.log("tek sayıların toplamı", tekToplam)
+        console.log("çift sayıların toplamı", ciftToplam)
+
+        //Klavyeden girilecek iki pozitif tam sayının OBEB (Ortak Bölenlerin En Büyüğü)’ini bul
+        var sayi1 = +prompt("1. sayıyı giriniz:")
+        var sayi2 = +prompt("2. sayıyı giriniz:")
+        while (true) {
+            var kalan = sayi1 % sayi2
+            if (kalan == 0) {
+                break;
+            }
+            else {
+                sayi1 = sayi2;
+                sayi2 = kalan;
+            }
+            console.log("EBOB:", sayi2)
+
+            //Klavyeden girilecek bir sayının tek mi çift mi olduğunu bul
+            var sayi = +prompt(" sayıyı giriniz:")
+            if (sayi % 2 == 0) {
+                console.log(sayi, " sayısı çift sayıdır")
+            }
+            else {
+                console.log(sayi, " sayısı tek sayıdır")
+            }
+
+
+
+
+    </script>
+</body>
+
+</html>
