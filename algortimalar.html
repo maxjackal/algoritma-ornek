@@ -66,7 +66,14 @@
         }
 
         //Klavyeden girilen A ve B gibi iki sayının bölme işlemi kullanmadan sadece toplama ve çıkarma kullanarak kalanlı bölme yap
-
+        var sonuc=0;
+        var a = +prompt(" bölünen sayıyı giriniz:")
+        var b = +prompt("bölen sayıyı giriniz:")
+        while(a!==0){
+            a=a-b;
+            sonuc++
+        }
+        console.log(sonuc)
 
         //Klavyeden girilen A ve B gibi iki sayıyı, çarpma işlemi kullanmadan sadece toplama ve çıkarma kullanarak çarpıp sonucu ekrana yaz
         var sayac = 0;
